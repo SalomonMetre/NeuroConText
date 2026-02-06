@@ -116,6 +116,7 @@ metrics = {
     "test": defaultdict(list),
 }
 number_of_folds_to_run = 1
+
 for fold, (train_index, val_index) in enumerate(k_fold.split(preprocessed_train_text_embeddings)):
     val_index = val_index[:validation_size]  # Strict 1000 validation samples
     if fold >= number_of_folds_to_run:
